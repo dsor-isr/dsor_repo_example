@@ -27,7 +27,7 @@ processes:
             []
     
     - name: 'gazebo_simulation' # Set to true to use the gazebo simulator
-      launch_on_startup: false
+      launch_on_startup: true
       delay_before_start: 1.0
       cmd: 'roslaunch farol_gazebo_bringup vehicle_model.launch'
       args:
@@ -52,7 +52,7 @@ processes:
             []
     
     - name: 'tfs'
-      launch_on_startup: false
+      launch_on_startup: true
       delay_before_start: 3.0
       cmd: 'roslaunch farol_bringup simulation_tfs.launch'
       args:
@@ -61,7 +61,7 @@ processes:
             []
     
     - name: 'addons' # Set to true to use several addons like operation console and remote controller
-      launch_on_startup: false 
+      launch_on_startup: true
       delay_before_start: 4.0
       cmd: 'roslaunch farol_bringup addons.launch'
       args:
@@ -75,7 +75,7 @@ processes:
             []
     
     - name: 'navigation' # Set to true to use the Dsor Navigation Filter
-      launch_on_startup: false
+      launch_on_startup: true
       delay_before_start: 5.0
       cmd: 'roslaunch farol_bringup nav.launch'
       args:
@@ -101,7 +101,7 @@ processes:
             []
     
     - name: 'cooperative' # Set to true to enable cooperative missions
-      launch_on_startup: true
+      launch_on_startup: false
       delay_before_start: 7.0
       cmd: 'roslaunch farol_bringup cooperative.launch'
       args:
@@ -127,7 +127,7 @@ processes:
             []
     
     - name: 'planning' # Set to true to execute default paths (lines, arc, bernoulli)
-      launch_on_startup: false
+      launch_on_startup: true
       delay_before_start: 9.0
       cmd: 'roslaunch farol_bringup planning.launch'
       args:
@@ -138,7 +138,7 @@ processes:
     # Example related processes
     - name: 'cpp_counter'
       launch_on_startup: true
-      delay_before_start: 9.0
+      delay_before_start: 2.0
       cmd: 'roslaunch example_bringup cpp_counter.launch'
       args:
             []
@@ -147,7 +147,7 @@ processes:
 
     - name : 'python_counter'
       launch_on_startup: true
-      delay_before_start: 9.0
+      delay_before_start: 2.0
       cmd: 'roslaunch example_bringup python_counter.launch'
       args:
             []
