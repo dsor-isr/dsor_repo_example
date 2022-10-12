@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="name" />
+
+  <group ns="python_counter">
+
+    <rosparam command="load" file="$(find example_bringup)/config/vehicles/$(arg name)/python_counter.yaml"/>
+
+    <node pkg="python_counter" type="python_counter_node" name="python_counterNode" respawn="false" output="screen">
+    </node>
+
+  </group>
+
+</launch>

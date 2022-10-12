@@ -1,0 +1,22 @@
+addons/console_server:
+    PORT: 23518
+
+cooperative/cpf_wifi_server:
+    broadcast_port: 24518
+
+cooperative/cpf_wifi_client:
+    broadcast_port: 24518
+
+cpp_counter/CppCounterNode:
+  topics:
+    subscribers:
+      pause: "/#vehicle#/cpp_counter/pause"
+    publishers:
+      count: "/#vehicle#/cpp_counter/count"
+
+python_counter/python_counterNode:
+  topics:
+    subscribers:
+      pause: "/#vehicle#/python_counter/pause"
+    publishers:
+      count: "/#vehicle#/python_counter/count"
