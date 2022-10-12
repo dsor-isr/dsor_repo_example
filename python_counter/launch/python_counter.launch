@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+ <node pkg="python_counter" type="python_counter_node" name="python_counterNode" respawn="false" output="screen">
+	<rosparam command="load" file="$(find python_counter)/config/config_python_counter.yaml"/>
+</node>
+
+</launch>
